@@ -1,0 +1,44 @@
+<nav class="navbar">
+    <div class="navbar-container">
+      <!-- 添加图片 -->
+      <img src="assets/logo.png" alt="logo" class="navbar-logo" />
+      <!-- <img src="https://repository.rice.edu/assets/rice/images/Rice_Research_Repository_logo_color.png" alt="logo" class="navbar-logo" /> -->
+  
+      <!-- 中间部分内容 -->
+      <!-- 中间部分内容 -->
+    <div class="navbar-center">
+      <a href="https://repository.rice.edu/community-list" class="navbar-community-link">
+        Communities & Collections
+      </a>
+      <a routerLink="/graphaccess" class="navbar-community-link ms-3">
+        Graph Database Search
+      </a>
+    </div>
+
+
+      <div class="navbar-centerr">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            All of R3
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="https://repository.rice.edu/browse/dateissued">By Issue Date</a></li>
+            <li><a class="dropdown-item" href="https://repository.rice.edu/browse/author">By Author</a></li>
+            <li><a class="dropdown-item" href="https://repository.rice.edu/browse/title">By Title</a></li>
+            <li><a class="dropdown-item" href="https://repository.rice.edu/browse/subject">By Subject</a></li>
+            <li><a class="dropdown-item" href="https://repository.rice.edu/browse/srsc">By Subject Category</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- 右侧菜单 -->
+      <div class="navbar-right">
+        <a href="/search" class="navbar-item">
+          <i class="fas fa-search"></i> <!-- 需要引入 FontAwesome 或替换为图片 -->
+        </a>
+        <a href="/language" class="navbar-item">English</a>
+        <a href="/login" class="navbar-item">Log In</a>
+      </div>
+    </div>
+  </nav>
+  

@@ -1,0 +1,21 @@
+.graph-wrapper {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #ddd;  /* 添加边框 */
+    border-radius: 10px;     /* 圆角 */
+    padding: 10px;           /* 内边距 */
+    background-color: #f9f9f9; /* 背景色 */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollable-results {
+    max-height: 100vh; /* 你可以根据需要调整这个高度 */
+    overflow-y: auto;
+    padding-right: 10px; /* 预留空间避免滚动条挡住文字 */
+}
+
+.times-font {
+    font-family: "Times New Roman", Times, serif;
+}

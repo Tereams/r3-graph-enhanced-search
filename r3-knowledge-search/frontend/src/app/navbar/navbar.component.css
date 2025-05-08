@@ -1,0 +1,76 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: green; */
+    width: 100%;
+    max-width: 1200px; /* 控制整体宽度 */
+  }
+  
+  .navbar-logo {
+    height: 100px; /* 设置图片高度 */
+    /* margin-right: 20px; */
+  }
+  
+  .navbar-center {
+    text-align: center;
+    /* background-color: greenyellow; */
+    width: fit-content;
+    padding: 10px;
+    /* flex-grow: 1; */
+  }
+
+  .navbar-community-link{
+    font-size: 1.05rem;
+    /* font-weight: bold; */
+    color: #003366;
+    text-decoration: none; 
+  }
+
+  .navbar-centerr{
+    /* text-align: center; */
+    /* background-color: red; */
+    margin-right: 10px;
+    padding: 10px;
+    /* flex-grow: 1; */
+  }
+  
+  .navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  .navbar-subtitle {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .navbar-right {
+    display: flex;
+    /* background-color: blueviolet; */
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .navbar-item {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-item:hover {
+    color: #ff9800;
+  }
+  

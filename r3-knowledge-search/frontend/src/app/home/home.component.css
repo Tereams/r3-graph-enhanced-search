@@ -1,0 +1,92 @@
+.main-container {
+    height: 480px; /* 占满整个屏幕高度 */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* 元素垂直排列 */
+    align-items: flex-start; /* 左对齐内容 */
+    padding: 20px; /* 设置内边距 */
+    background-image: url('https://repository.rice.edu/assets/rice/images/Rice_Lovett_Arch-Relief_RB-2.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 提高文字可读性 */
+  }
+  
+  /* 标题样式 */
+  .title {
+    font-size: 2.25rem;
+    margin-left: 300px;
+    margin-bottom: 40px;
+    margin-top: 45px;
+    /* background-color: aquamarine; */
+  }
+  
+  /* 歌词文字样式 */
+  .lyrics {
+    font-size: 1.25rem;
+    margin-left: 300px;
+    margin-right: 300px;
+    /* background-color: coral; */
+  }
+
+  .search-box-container {
+    width: 100%; /* 设置宽度为 60% */
+    max-width: 1000px; 
+    margin-top: 20px; /* 上间距 */
+    margin-left: auto; /* 左右自动居中 */
+    margin-right: auto; /* 左右自动居中 */ /* 居中对齐并添加上下间距 */
+    /* background-color: aqua; */
+  }
+
+  .center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* 上间距 */
+    margin-left: auto; /* 左右自动居中 */
+    margin-right: auto; /* 左右自动居中 */ /* 居中对齐并添加上下间距 */
+  }
+
+  .communities-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    /* background-color: antiquewhite; */
+  }
+
+  .communities-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1050px;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    /* background-color: rgb(151, 92, 15); */
+  }
+  
+  .communities-container h2 {
+    font-size: 2.25rem;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  /* .communities-container ul {
+    list-style: none;
+    padding: 0;
+  } */
+  
+  .communities-container a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #007bff;
+  }
+  
+  .communities-container a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  

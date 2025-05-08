@@ -1,0 +1,71 @@
+<!-- <p>search-results works!</p>
+<h1>Search Results</h1>
+<p>You searched for: "{{ query }}"</p>
+
+<div *ngIf="results.length > 0; else noResults">
+    <ul>
+      <li *ngFor="let result of results">
+        <h3>{{ result["dc.title[en_US]"] }}</h3>
+        <p>{{ result["dc.description.abstract[en_US]"] }}</p>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #noResults>
+    <p>No results found.</p>
+  </ng-template> -->
+
+  <!-- <p>search-results works!</p> -->
+
+<div class="container mt-4">
+    <div class="row d-flex">
+        <!-- 左侧部分 -->
+        <div class="col-md-6 border-end">
+            <h5 class="mb-1">Topic Evolution and Keyword Clustering</h5>
+            <p class="text-muted small mb-2">
+                Once a set of articles is retrieved, we analyze their shared topic nodes—that is, we find the most common keywords across these papers. 
+                These keywords are shown to help refine the query and reveal how research ideas evolve over time, from early foundational work to recent developments.
+            </p>
+            <div class="graph-wrapper">
+                <app-graph [graphData]="graphData"></app-graph>
+            </div>
+            <h5 class="mb-1">Explanation Graph: How This Result Was Found</h5>
+            <p class="text-muted small mb-2">
+                For each article, we show the exact path that led to its retrieval—starting from your query, passing through topic nodes, and ending at the paper. 
+                The legend helps you understand each node: <strong>Query</strong> (your starting point), <strong>Topic</strong> (shared concepts), and <strong>Paper</strong> (result). 
+                Even if an article doesn't contain your keywords, the graph shows why it's relevant.
+            </p>
+            <div class="graph-wrapper">
+                <app-graph [graphData]="selectedGraphData"></app-graph>
+            </div>
+        </div>
+
+        <!-- 右侧部分 - 搜索结果 -->
+        <div class="col-md-6 scrollable-results">
+            <h1>Search Results</h1>
+            <p>You searched for: "{{ query }}"</p>
+        
+            <div *ngIf="results.length > 0; else noResults">
+                <div *ngFor="let result of results" class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title times-font">
+                            <a [href]="result['dc.identifier.uri[en_US]']" target="_blank">
+                              {{ result["dc.title[en_US]"] }}
+                            </a>
+                          </h5>
+                          <h6 class="card-subtitle text-truncate">
+                            {{ result["dc.contributor.author[en_US]"] ? result["dc.contributor.author[en_US]"].split('||').join(', ') : 'Unknown Author' }}
+                          </h6>
+                        <p class="card-text mt-2 text-truncate">{{ result["dc.description.abstract[en_US]"] }}</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2"
+                            (click)="loadGraphForItem(result)">Show Graph</button>
+                    </div>
+                </div>
+            </div>
+            
+            <ng-template #noResults>
+                <p class="text-muted">No results found.</p>
+            </ng-template>
+        </div>
+    </div>
+</div>

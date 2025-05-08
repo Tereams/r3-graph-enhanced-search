@@ -1,0 +1,15 @@
+<div class="container py-4">
+    <h2 class="text-center mb-4">Graph Database Search</h2>
+  
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-6 d-flex">
+        <input [(ngModel)]="searchQuery" placeholder="Enter keyword..." class="form-control me-2" />
+        <button class="btn btn-primary" (click)="search()">Search</button>
+      </div>
+    </div>
+  
+    <div style="height: 100vh;">
+        <div class="graph-container"></div>
+    </div>
+  </div>
+  

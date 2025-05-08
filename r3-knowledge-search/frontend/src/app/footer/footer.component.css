@@ -1,0 +1,21 @@
+.custom-footer {
+    background-color: #a6caed; /* 背景颜色 */
+    color: #343a40; /* 字体颜色 */
+    padding-top: 30px; 
+    padding: 20px auto;
+  }
+  
+  .custom-footer a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .custom-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .custom-footer h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  

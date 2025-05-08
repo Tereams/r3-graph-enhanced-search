@@ -1,0 +1,79 @@
+import { Component, Input, OnChanges, SimpleChanges, ElementRef, AfterViewInit } from '@angular/core';
+import * as echarts from 'echarts';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-graph',
+  standalone: true,
+  imports: [CommonModule],
+  template: '<div class="graph-container" #chartContainer></div>',
+  styles: ['.graph-container { width: 500px; height: 500px; }']
+})
+export class GraphComponent implements AfterViewInit, OnChanges {
+  @Input() graphData: any;
+  private chart: any;
+
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    this.initChart();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['graphData'] && this.chart) {
+      this.updateChart();
+    }
+  }
+
+  private initChart() {
+    const element = this.el.nativeElement.querySelector('.graph-container');
+    if (element) {
+      this.chart = echarts.init(element);
+      this.updateChart();
+    }
+  }
+
+  private updateChart() {
+    if (!this.graphData || !this.graphData.nodes.length) return;
+    
+    const option = {
+      tooltip: {},
+      series: [
+        {
+          type: 'graph',
+          layout: 'force',
+          data: this.graphData.nodes,
+          links: this.graphData.links,
+          roam: true,
+          label: {
+            show: true,
+            position: 'right'
+          },
+          force: {
+            repulsion: 250,
+            edgeLength: [60, 130]
+          },
+          lineStyle: {
+            color: 'source',
+            curveness: 0.3
+          }
+        }
+      ]
+    };
+    
+    this.chart.setOption(option);
+  }
+}
+
+
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-graph',
+//   imports: [],
+//   templateUrl: './graph.component.html',
+//   styleUrl: './graph.component.css'
+// })
+// export class GraphComponent {
+
+// }
