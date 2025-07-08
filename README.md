@@ -58,7 +58,7 @@ r3-knowledge-search/            # Full-stack application
   
   - `output.jsonl`, `graph3.gml`, `title_index.json`, `keyword_index.json`
   
-  📄[View Documentation](knowledge_graph_builder/README.md)
+📄[View Documentation](knowledge_graph_builder/README.md)
 
 ---
 
